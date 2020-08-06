@@ -13,10 +13,18 @@
 
 //Front routes start
 // Admin routes
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 Route::group(
     ['namespace' => 'Front', 'as' => 'jobs.'],
     function () {
-        Route::get('/', 'FrontJobsController@jobOpenings')->name('jobOpenings');
+        Route::get('/', 'FrontJobsController@home')->name('home');
+        Route::get('/about', 'FrontJobsController@about')->name('about');
+        Route::get('/employers', 'FrontJobsController@employers')->name('employers');
+        Route::get('/job-seeker', 'FrontJobsController@jobSeeker')->name('job-seeker');
+
+//        Route::get('/', 'FrontJobsController@jobOpenings')->name('jobOpenings');
         Route::get('/job-offer/{slug?}', 'FrontJobOfferController@index')->name('job-offer');
         Route::post('/save-offer', 'FrontJobOfferController@saveOffer')->name('save-offer');
         Route::get('/job/{slug}', 'FrontJobsController@jobDetail')->name('jobDetail');

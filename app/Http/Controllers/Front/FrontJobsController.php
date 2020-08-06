@@ -44,6 +44,22 @@ class FrontJobsController extends FrontBaseController
         }
     }
 
+    public function home(){
+        return view('front.home', $this->data);
+    }
+
+    public function about(){
+        return view('front.about-us', $this->data);
+    }
+
+    public function employers(){
+        return view('front.employers', $this->data);
+    }
+
+    public function jobSeeker(){
+        return view('front.job-seeker', $this->data);
+    }
+
     public function jobOpenings()
     {
         $this->jobs = Job::activeJobs();

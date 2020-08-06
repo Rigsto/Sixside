@@ -28,13 +28,23 @@
     </style>
 
     <!-- Styles -->
-    <link href="{{ asset('froiden-helper/helper.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/node_modules/toast-master/css/jquery.toast.css') }}" rel="stylesheet">
+{{--    <link href="{{ asset('froiden-helper/helper.css') }}" rel="stylesheet">--}}
+{{--    <link href="{{ asset('assets/node_modules/toast-master/css/jquery.toast.css') }}" rel="stylesheet">--}}
 
-    <link href="{{ asset('front/assets/css/core.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('front/assets/css/thesaas.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('front/assets/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('front/assets/css/custom.css') }}" rel="stylesheet">
+{{--    <link href="{{ asset('front/assets/css/core.min.css') }}" rel="stylesheet">--}}
+{{--    <link href="{{ asset('front/assets/css/thesaas.min.css') }}" rel="stylesheet">--}}
+{{--    <link href="{{ asset('front/assets/css/style.css') }}" rel="stylesheet">--}}
+{{--    <link href="{{ asset('front/assets/css/custom.css') }}" rel="stylesheet">--}}
+
+    <link rel="stylesheet" href="{{ asset('front/assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:200,300,400,500,600,700">
+    <link rel="stylesheet" href="{{ asset('front/assets/fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/fonts/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/css/styles.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
+
     @stack('header-css')
 
     <!-- Favicons -->
@@ -59,45 +69,22 @@
 </head>
 
 <body>
-
-
-<!-- Topbar -->
-<nav class="topbar topbar-inverse topbar-expand-md">
-    <div class="container">
-
-        <div class="topbar-left">
-            {{-- <button class="topbar-toggler">&#9776;</button> --}}
-            <a class="topbar-brand" href="{{ url('/') }}">
-                <img src="{{ $global->logo_url }}" class="logo-inverse" alt="home" />
-            </a>
-        </div>
-
-
-        {{--<div class="topbar-right">--}}
-            {{--<div class="d-inline-flex ml-30">--}}
-                {{--<a class="btn btn-sm btn-primary mr-4" href="page-login.html">@lang('modules.front.visitMainWebsite') <i class="fa fa-arrow-right"></i></a>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
+<!-- Start: Navigation with Button -->
+<nav class="navbar navbar-light navbar-expand-lg navigation-clean-button" style="padding-top: 0px;padding-bottom: 0px;margin-bottom: 40px;">
+    <div class="container"><a class="navbar-brand" href="{{route('jobs.home')}}"><img src="{{ asset('front/assets/img/sixSideLogo.svg') }}"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1" style="border-color: rgb(237,93,86);"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon" style="border-color: rgb(237,93,86);color: rgb(237,93,86);"></span></button>
+        <div
+                class="collapse navbar-collapse text-center text-sm-center text-md-center flex-column align-items-stretch flex-sm-column align-items-sm-stretch flex-md-column justify-content-md-center align-items-md-stretch flex-lg-row align-items-lg-center flex-xl-row align-items-xl-center"
+                id="navcol-1" style="padding-top: 10px;padding-bottom: 10px;">
+            <ul class="nav navbar-nav ml-auto" style="margin-right: 20px;">
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{route('jobs.about')}}" style="font-size: 16px;">About us</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{route('jobs.employers')}}" style="color: rgb(61,79,90);font-size: 16px;">Employers</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{route('jobs.job-seeker')}}" style="color: rgb(61,79,90);font-size: 16px;">Job Seekers</a></li>
+            </ul><span class="d-flex d-sm-flex d-md-flex flex-column justify-content-center justify-content-sm-center flex-lg-row flex-xl-row navbar-text actions">
+                <button class="btn btn-primary navBtn" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);margin-right: 20px;">View Jobs</button><button class="btn btn-primary border-white navBtn primaryBtnHovered" type="button" style="background-color: #ED5D56;">Hire with us</button>
+            </span></div>
     </div>
 </nav>
-<!-- END Topbar -->
-
-<!-- Header -->
-<header class="header header-inverse" style="background-image: url({{ $frontTheme->background_image_url }})" data-overlay="8">
-    <div class="container text-center">
-
-        <div class="row">
-            <div class="col-12 col-lg-8 offset-lg-2">
-
-                @yield('header-text')
-
-            </div>
-        </div>
-
-    </div>
-</header>
-<!-- END Header -->
+<!-- End: Navigation with Button -->
 
 <!-- Main container -->
 <main class="main-content">
@@ -107,27 +94,28 @@
 </main>
 <!-- END Main container -->
 
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="container">
-        <div class="row gap-y align-items-center">
-            <div class="col-9 col-lg-9">
-               @forelse($customPages as $customPage)
-                   <a href="/{{ $customPage->slug }}"><span>{{ strtoupper($customPage->name) }}</span></a>
-               @empty
-               @endforelse
-
-            </div>
-            <div class="col-3 col-lg-3">
-                &copy; {{ \Carbon\Carbon::today()->year }} @lang('app.by') {{ $companyName }}
-
-            </div>
+<!-- Start: Footer Basic -->
+<div class="footer-basic">
+    <footer>
+        <div class="d-flex flex-column justify-content-around align-items-center flex-sm-column align-items-sm-center flex-md-column align-items-md-center flex-lg-row flex-xl-row" style="padding-right: 0px;padding-left: 0px;">
+            <!-- Start: Social Icons -->
+            <div class="d-flex flex-column align-items-xl-start social" style="padding-bottom: 0px;"><img src="{{ asset('front/assets/img/sixSideLogo.svg') }}" style="width: 250px;margin-bottom: 10px;"></div>
+            <!-- End: Social Icons -->
+            <!-- Start: Links -->
+            <ul class="list-inline d-flex d-sm-block d-md-block d-lg-block d-xl-block flex-column flex-sm-column" style="margin-top: 12px;margin-bottom: 20px;">
+                <li class="list-inline-item" style="margin-bottom: 10px;"><a href="{{route('jobs.about')}}">About Us</a></li>
+                <li class="list-inline-item" style="margin-right: 18px;margin-left: 18px;margin-bottom: 10px;"><a href="{{route('jobs.employers')}}">Employers</a></li>
+                <li class="list-inline-item" style="margin-bottom: 10px;"><a href="{{route('jobs.job-seeker')}}" style="margin-bottom: 10px;">Job Seekers</a></li>
+            </ul>
+            <!-- End: Links -->
+            <p style="color: rgb(237,93,86);font-size: 18px;margin-top: 10px;margin-bottom: 26px;"><span style="text-decoration: underline;">hello@sixsiderecruitment.com</span></p>
         </div>
-    </div>
-</footer>
-<!-- END Footer -->
-
-
+        <!-- Start: Copyright -->
+        <p class="copyright" style="margin-top: 20px;">© 2020 Six Side Recruitment Inc. </p>
+        <!-- End: Copyright -->
+    </footer>
+</div>
+<!-- End: Footer Basic -->
 
 <!-- Scripts -->
 <script src="{{ asset('front/assets/js/core.min.js') }}"></script>
@@ -135,6 +123,11 @@
 <script src="{{ asset('front/assets/js/script.js') }}"></script>
 <script src="{{ asset('froiden-helper/helper.js') }}"></script>
 <script src="{{ asset('assets/node_modules/toast-master/js/jquery.toast.js') }}"></script>
+
+<script src="{{ asset('front/assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('front/assets/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+<script src="{{ asset('front/assets/js/script.min.js') }}"></script>
 
 @stack('footer-script')
 
