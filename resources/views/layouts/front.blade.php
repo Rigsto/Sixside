@@ -79,8 +79,10 @@
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{route('jobs.about')}}" style="font-size: 16px;">About us</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{route('jobs.employers')}}" style="color: rgb(61,79,90);font-size: 16px;">Employers</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{route('jobs.job-seeker')}}" style="color: rgb(61,79,90);font-size: 16px;">Job Seekers</a></li>
-            </ul><span class="d-flex d-sm-flex d-md-flex flex-column justify-content-center justify-content-sm-center flex-lg-row flex-xl-row navbar-text actions">
-                <button class="btn btn-primary navBtn" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);margin-right: 20px;">View Jobs</button><button class="btn btn-primary border-white navBtn primaryBtnHovered" type="button" style="background-color: #ED5D56;">Hire with us</button>
+            </ul>
+            <span class="d-flex d-sm-flex d-md-flex flex-column justify-content-center justify-content-sm-center flex-lg-row flex-xl-row navbar-text actions">
+                <button class="btn btn-primary navBtn" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);margin-right: 20px;">View Jobs</button>
+                <a href="{{route('jobs.hire-with-us')}}" class="btn btn-primary border-white navBtn primaryBtnHovered" type="button" style="background-color: #ED5D56; color: white">Hire with us</a>
             </span></div>
     </div>
 </nav>

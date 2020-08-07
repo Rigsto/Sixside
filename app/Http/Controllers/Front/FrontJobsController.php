@@ -60,6 +60,14 @@ class FrontJobsController extends FrontBaseController
         return view('front.job-seeker', $this->data);
     }
 
+    public function uploadResume(){
+        return view('front.upload-resume', $this->data);
+    }
+
+    public function hireWithUs(){
+        return view('front.hire-with-us', $this->data);
+    }
+
     public function jobOpenings()
     {
         $this->jobs = Job::activeJobs();

@@ -23,6 +23,8 @@ Route::group(
         Route::get('/about', 'FrontJobsController@about')->name('about');
         Route::get('/employers', 'FrontJobsController@employers')->name('employers');
         Route::get('/job-seeker', 'FrontJobsController@jobSeeker')->name('job-seeker');
+        Route::get('/upload-resume', 'FrontJobsController@uploadResume')->name('upload-resume');
+        Route::get('/hire-with-us', 'FrontJobsController@hireWithUs')->name('hire-with-us');
 
 //        Route::get('/', 'FrontJobsController@jobOpenings')->name('jobOpenings');
         Route::get('/job-offer/{slug?}', 'FrontJobOfferController@index')->name('job-offer');

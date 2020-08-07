@@ -9,7 +9,7 @@
                         <p class="text-md-center text-lg-left" style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;">We are your long term career consultants. We can provide you with accurate and timely market information to help you make the best decisions for your career.</p>
                         <div class="text-md-center d-flex flex-column flex-shrink-0 align-items-stretch align-content-center flex-sm-row justify-content-sm-center flex-md-row justify-content-md-center flex-lg-row justify-content-lg-start flex-xl-row justify-content-xl-start"><button class="btn btn-primary border-white primaryBtnHovered" type="button" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">View Jobs</button>
                             <p class="visible"
-                               style="margin-right: 20px;margin-left: 20px;max-height: 100%;min-height: 100%;margin-top: 16px;color: rgb(197,197,197);font-size: 12px;">OR</p><button class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">Send Us Your Resume</button></div>
+                               style="margin-right: 20px;margin-left: 20px;max-height: 100%;min-height: 100%;margin-top: 16px;color: rgb(197,197,197);font-size: 12px;">OR</p><a href="{{ route('jobs.upload-resume') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">Send Us Your Resume</a></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-6 offset-xl-0 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center order-1 justify-content-sm-center order-sm-1 justify-content-md-center order-md-1 justify-content-lg-center order-lg-2 justify-content-xl-center order-xl-2"
@@ -125,13 +125,14 @@
             </div>
         </div>
     </section>
-    <section style="background: url(assets/img/Group%2022.svg?h=919214a060030815924bd4008f4bb2aa) center / cover no-repeat;/*background-image: url(assets/img/Group%2022.png?h=03c6bae73bf966f465e646ed2d6a2fa5) center / contain no-repeat;*/background-color: #ed5d56;font-family: Inter, sans-serif;">
+    <section style="background: url({{ asset('front/assets/img/Group%2022.svg') }}) center / cover no-repeat;background-color: #ed5d56;font-family: Inter, sans-serif;">
         <div class="container d-flex flex-column justify-content-between" style="padding-top: 40px;padding-bottom: 60px;padding-right: 40px;padding-left: 40px;">
             <div class="d-lg-flex d-xl-flex flex-column align-items-lg-center justify-content-xl-center align-items-xl-center" style="padding-top: 40px;padding-bottom: 20px;">
                 <h1 class="ctaTitle" style="font-weight: bold;font-size: 36px;color: rgb(255,255,255);text-align: center;max-width: 720px;margin-bottom: 20px;">Transform your resume into a powerful results-orientated document.</h1>
                 <p style="font-weight: normal;color: rgba(255,255,255,0.83);text-align: center;">We provide resume improvement tips and interview preparation as well. </p>
             </div>
-            <div class="d-flex flex-row justify-content-center justify-content-sm-center align-items-lg-center justify-content-xl-center align-items-xl-center"><button class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Send Us Your Resume</button></div>
+            <div class="d-flex flex-row justify-content-center justify-content-sm-center align-items-lg-center justify-content-xl-center align-items-xl-center">
+                <a href="{{ route('jobs.upload-resume') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Send Us Your Resume</a></div>
         </div>
     </section>
 @endsection

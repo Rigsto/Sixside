@@ -68,13 +68,14 @@
             </div>
         </div>
     </section>
-    <section style="background: url(assets/img/Group%2022.png?h=03c6bae73bf966f465e646ed2d6a2fa5) center / cover no-repeat;/*background-image: url(assets/img/Group%2022.png?h=03c6bae73bf966f465e646ed2d6a2fa5) center / contain no-repeat;*/background-color: #ed5d56;">
+    <section style="background: url( {{asset('front/assets/img/Group%2022.png')}}) center / cover no-repeat;background-color: #ed5d56;">
         <div class="container d-flex flex-column justify-content-between" style="padding-top: 40px;padding-bottom: 60px;padding-right: 40px;padding-left: 40px;">
             <div style="padding-top: 40px;padding-bottom: 20px;">
                 <h1 style="font-weight: bold;font-size: 36px;color: rgb(255,255,255);text-align: center;">Start Hiring With Us Today!</h1>
                 <p style="font-weight: normal;color: rgba(255,255,255,0.83);text-align: center;">Copywriting here about finding the best candidate for employers</p>
             </div>
-            <div class="d-flex flex-row justify-content-center justify-content-sm-center align-items-lg-center justify-content-xl-center align-items-xl-center"><button class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</button></div>
+            <div class="d-flex flex-row justify-content-center justify-content-sm-center align-items-lg-center justify-content-xl-center align-items-xl-center">
+                <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</a></div>
         </div>
     </section>
 @endsection
