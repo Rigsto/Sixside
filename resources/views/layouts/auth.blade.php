@@ -65,7 +65,7 @@
 
             @yield('content')
             <div class="form-actions  pt-3">
-                <a href="{{route('jobs.jobOpenings')}}" class="btn btn-sm btn-block btn-rounded btn-outline-success text-uppercase">{{__('messages.VisitJobOpening')}}</a>
+                <a href="{{route('jobs.home')}}" class="btn btn-sm btn-block btn-rounded btn-outline-success text-uppercase">{{__('messages.VisitJobOpening')}}</a>
             </div>
         </div>
         <!-- /.login-card-body -->

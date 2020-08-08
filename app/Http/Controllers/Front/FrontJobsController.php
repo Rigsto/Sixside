@@ -60,6 +60,10 @@ class FrontJobsController extends FrontBaseController
         return view('front.job-seeker', $this->data);
     }
 
+    public function viewJobs(){
+        return view('front.view-jobs');
+    }
+
     public function jobOpenings()
     {
         $this->jobs = Job::activeJobs();
@@ -98,7 +102,9 @@ class FrontJobsController extends FrontBaseController
             ->firstOrFail();
         Session::put('lastPageUrl', $slug);
 
-        $this->pageTitle = $this->job->title . ' - ' . $this->companyName;
+        
+
+        $this->pageTitle = $this->job->title . " - " . $this->companyName;
         $this->metaTitle = $this->job->meta_details['title'];
         $this->metaDescription = $this->job->meta_details['description'];
         $this->metaImage = $this->job->company->logo_url;
@@ -231,7 +237,7 @@ class FrontJobsController extends FrontBaseController
             $linkedin = true;
         }
 
-        Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
+        // Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
 
         return Reply::dataOnly(['status' => 'success', 'msg' => __('modules.front.applySuccessMsg')]);
     }

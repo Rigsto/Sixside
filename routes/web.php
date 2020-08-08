@@ -23,8 +23,8 @@ Route::group(
         Route::get('/about', 'FrontJobsController@about')->name('about');
         Route::get('/employers', 'FrontJobsController@employers')->name('employers');
         Route::get('/job-seeker', 'FrontJobsController@jobSeeker')->name('job-seeker');
-
-//        Route::get('/', 'FrontJobsController@jobOpenings')->name('jobOpenings');
+        Route::get('/view-jobs', 'FrontJobsController@viewjobs')->name('view-jobs');
+        
         Route::get('/job-offer/{slug?}', 'FrontJobOfferController@index')->name('job-offer');
         Route::post('/save-offer', 'FrontJobOfferController@saveOffer')->name('save-offer');
         Route::get('/job/{slug}', 'FrontJobsController@jobDetail')->name('jobDetail');
@@ -33,6 +33,8 @@ Route::group(
         Route::post('/job/fetch-country-state', 'FrontJobsController@fetchCountryState')->name('fetchCountryState');
         Route::get('auth/callback/{provider}', 'FrontJobsController@callback')->name('linkedinCallback');
         Route::get('auth/redirect/{provider}', 'FrontJobsController@redirect')->name('linkedinRedirect');
+
+        Route::get('/employers', 'FrontJobsController@employers')->name('employers');
     }
 );
 

@@ -1,0 +1,138 @@
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.btn {
+    border-width: 0px;
+}
+
+input:focus, textarea:focus{
+    border: 1px solid #ED5D56 !important;
+    box-shadow: none !important;
+}
+
+::placeholder {
+    color:#585757!important;
+    opacity: 0.5!important;
+}
+
+:-ms-input-placeholder {
+    color: #585757!important;
+    opacity: 0.5!important;
+}
+
+::-ms-input-placeholder {
+    color: #585757!important;
+    opacity: 0.5!important;
+}
+
+.navigation {
+    background-color: #ED5D56;
+    color: white !important;
+}
+
+.navigation a {
+    color: inherit;
+}
+
+.category-name {
+    border: 1px solid #DBDBDB;
+    border-radius: 8px;
+}
+
+.apply-button {
+    background-color: #ED5D56;
+    color: white;
+    height: 50px;
+}
+
+.apply-button:hover {
+    background-color: #D64C45;
+}
+
+.apply-button a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.social-media-item {
+    color: black;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+
+.social-media-item:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* JOB APPLY PAGE */
+.application-form {
+    border: 1px solid #DBDBDB;
+    border-radius: 8px;
+}
+
+.file-label {
+    cursor: pointer;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+
+input[name="photo"],
+input[name="resume"] {
+    z-index: -1;
+    left: 0;
+    position: absolute;
+}
+
+.submit-button {
+    background-color: #ED5D56;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #D64C45;
+    color: white;
+}
+
+/* END JOB APPLY PAGE */
+
+/* TEXT COLOR */
+.text-primary-red {
+    color: #ED5D56 !important;
+}
+
+.text-secondary {
+    color: #989898;
+}
+
+.text-white {
+    color: white;
+}
+
+/* END TEXT COLOR */
+
+/* FONT WEIGHT */
+.font-weight-medium {
+    font-weight: 600 !important;
+}
+
+/* END FONT WEIGHT */
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    margin: 0;
+    padding: 0;
+}

@@ -36,7 +36,7 @@ class Job extends Model
     }
 
     public function skills(){
-        return $this->hasMany(JobSkill::class, 'job_id');
+        return $this->hasMany(Skill::class, 'category_id', 'category_id');
     }
 
     public function company(){
