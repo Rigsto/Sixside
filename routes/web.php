@@ -24,7 +24,11 @@ Route::group(
         Route::get('/employers', 'FrontJobsController@employers')->name('employers');
         Route::get('/job-seeker', 'FrontJobsController@jobSeeker')->name('job-seeker');
         Route::get('/view-jobs', 'FrontJobsController@viewjobs')->name('view-jobs');
-        
+
+        Route::get('/upload-resume', 'FrontJobsController@uploadResume')->name('upload-resume');
+        Route::get('/hire-with-us', 'FrontJobsController@hireWithUs')->name('hire-with-us');
+
+//        Route::get('/', 'FrontJobsController@jobOpenings')->name('jobOpenings');
         Route::get('/job-offer/{slug?}', 'FrontJobOfferController@index')->name('job-offer');
         Route::post('/save-offer', 'FrontJobOfferController@saveOffer')->name('save-offer');
         Route::get('/job/{slug}', 'FrontJobsController@jobDetail')->name('jobDetail');
@@ -73,7 +77,7 @@ Route::group(['middleware' => 'auth'], function () {
 
                     // Application Form routes
                     Route::resource('application-setting', 'ApplicationSettingsController');
-                    
+
                     // Role permission routes
                     Route::post('role-permission/assignAllPermission', ['as' => 'role-permission.assignAllPermission', 'uses' => 'ManageRolePermissionController@assignAllPermission']);
                     Route::post('role-permission/removeAllPermission', ['as' => 'role-permission.removeAllPermission', 'uses' => 'ManageRolePermissionController@removeAllPermission']);

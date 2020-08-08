@@ -62,6 +62,12 @@ class FrontJobsController extends FrontBaseController
 
     public function viewJobs(){
         return view('front.view-jobs');
+    public function uploadResume(){
+        return view('front.upload-resume', $this->data);
+    }
+
+    public function hireWithUs(){
+        return view('front.hire-with-us', $this->data);
     }
 
     public function jobOpenings()
@@ -102,7 +108,7 @@ class FrontJobsController extends FrontBaseController
             ->firstOrFail();
         Session::put('lastPageUrl', $slug);
 
-        
+
 
         $this->pageTitle = $this->job->title . " - " . $this->companyName;
         $this->metaTitle = $this->job->meta_details['title'];
@@ -125,7 +131,7 @@ class FrontJobsController extends FrontBaseController
             $this->error = $request->error_description;
             return view('errors.linkedin', $this->data);
         }
-        
+
         $this->user = Socialite::driver($provider)->user();
         $this->lastPageUrl = Session::get('lastPageUrl');
         Session::put('accessToken', $this->user->token);
@@ -221,7 +227,7 @@ class FrontJobsController extends FrontBaseController
             $jobApplication->photo = $filename;
             $jobApplication->save();
         }
-        
+
         $users = User::allAdmins();
         if (!empty($request->answer)) {
             foreach ($request->answer as $key => $value) {
@@ -247,7 +253,7 @@ class FrontJobsController extends FrontBaseController
         $responseArr = [];
 
         $response = [
-            "status" => "success", 
+            "status" => "success",
             "tp" => 1,
             "msg" => "Countries fetched successfully."
         ];
@@ -273,7 +279,7 @@ class FrontJobsController extends FrontBaseController
                 }
             break;
         }
-        $response = Arr::add($response, "result", $responseArr);                
+        $response = Arr::add($response, "result", $responseArr);
 
         return response()->json($response);
     }

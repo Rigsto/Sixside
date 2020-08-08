@@ -7,7 +7,8 @@
                     <div>
                         <h1 style="font-weight: bold;font-size: 48px;font-family: Inter, sans-serif;">Your Staffing &amp; Human Resourcing Partner</h1>
                         <p style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;margin-bottom: 20px;">Copywriting here about six side recruitment has to offer in maximum 3 lines.</p>
-                        <div class="d-flex flex-column flex-shrink-0 align-items-stretch align-content-center flex-sm-row justify-content-sm-center align-items-sm-center flex-md-row justify-content-md-center align-items-md-center flex-lg-row justify-content-lg-start align-items-lg-center flex-xl-row align-items-xl-center"><button class="btn btn-primary btn-lg border-white MainBtn primaryBtnHovered" type="button" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;">Hire with Six Side</button>
+                        <div class="d-flex flex-column flex-shrink-0 align-items-stretch align-content-center flex-sm-row justify-content-sm-center align-items-sm-center flex-md-row justify-content-md-center align-items-md-center flex-lg-row justify-content-lg-start align-items-lg-center flex-xl-row align-items-xl-center">
+                            <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary btn-lg border-white MainBtn primaryBtnHovered" type="button" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;">Hire with Six Side</a>
                             <p class="text-center text-sm-left text-md-left text-lg-left text-xl-left visible"
                                style="margin-right: 20px;margin-left: 20px;max-height: 100%;min-height: 100%;margin-top: 16px;color: rgb(197,197,197);font-size: 12px;">OR</p><button class="btn btn-primary btn-lg" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-weight: 500;">View Jobs</button></div>
                     </div>
@@ -77,7 +78,7 @@
             </div>
         </div>
     </section>
-    <section style="background: url(assets/img/Group%2022.png?h=03c6bae73bf966f465e646ed2d6a2fa5) center / auto no-repeat;/*background-image: url(assets/img/Group%2022.png?h=03c6bae73bf966f465e646ed2d6a2fa5) center / contain no-repeat;*/background-color: #ed5d56;">
+    <section style="background: url({{ asset('front/assets/img/Group%2022.png') }}) center / auto no-repeat; background-color: #ed5d56;">
         <div class="container justify-content-between align-items-md-center" style="padding-top: 100px;padding-bottom: 100px;padding-right: 40px;padding-left: 40px;">
             <div class="row d-md-flex justify-content-md-center justify-content-lg-center">
                 <div class="col-sm-12 col-lg-11 col-xl-7" style="margin-bottom: 20px;">
@@ -89,7 +90,8 @@
                 <div class="col-md-11 col-lg-10 col-xl-5 offset-lg-0 d-lg-flex justify-content-lg-center">
                     <div class="text-center d-flex flex-column align-items-stretch flex-sm-row justify-content-sm-center align-items-sm-center flex-md-row align-items-md-center flex-lg-row align-items-lg-center flex-xl-row justify-content-xl-center align-items-xl-center"><button class="btn btn-primary btn-lg border-white" type="button" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;">View All Jobs</button>
                         <p class="d-flex justify-content-center align-items-center visible"
-                           style="margin-right: 10px;margin-left: 10px;max-height: 0px;min-height: 0px;color: rgb(255,255,255);font-size: 12px;margin-top: 20px;margin-bottom: 20px;">OR</p><button class="btn btn-primary btn-lg" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;">Send Resume</button></div>
+                           style="margin-right: 10px;margin-left: 10px;max-height: 0px;min-height: 0px;color: rgb(255,255,255);font-size: 12px;margin-top: 20px;margin-bottom: 20px;">OR</p>
+                        <a href="{{ route('jobs.upload-resume') }}" class="btn btn-primary btn-lg" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;">Send Resume</a></div>
                 </div>
             </div>
         </div>
@@ -148,7 +150,8 @@
                 <h1 style="font-weight: bold;font-size: 36px;color: rgb(255,255,255);text-align: center;font-family: Inter, sans-serif;">Start Hiring With Us Today!</h1>
                 <p style="font-weight: normal;color: rgba(255,255,255,0.83);text-align: center;font-family: Inter, sans-serif;">Copywriting here about finding the best candidate for employers</p>
             </div>
-            <div class="d-flex flex-row justify-content-center justify-content-sm-center align-items-lg-center justify-content-xl-center align-items-xl-center"><button class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</button></div>
+            <div class="d-flex flex-row justify-content-center justify-content-sm-center align-items-lg-center justify-content-xl-center align-items-xl-center">
+                <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</a></div>
         </div>
     </section>
 @endsection
