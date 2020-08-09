@@ -23,7 +23,6 @@ Route::group(
         Route::get('/about', 'FrontJobsController@about')->name('about');
         Route::get('/employers', 'FrontJobsController@employers')->name('employers');
         Route::get('/job-seeker', 'FrontJobsController@jobSeeker')->name('job-seeker');
-        Route::get('/view-jobs', 'FrontJobsController@viewjobs')->name('view-jobs');
 
         Route::get('/upload-resume', 'FrontJobsController@uploadResume')->name('upload-resume');
         Route::get('/hire-with-us', 'FrontJobsController@hireWithUs')->name('hire-with-us');
@@ -37,6 +36,12 @@ Route::group(
         Route::post('/job/fetch-country-state', 'FrontJobsController@fetchCountryState')->name('fetchCountryState');
         Route::get('auth/callback/{provider}', 'FrontJobsController@callback')->name('linkedinCallback');
         Route::get('auth/redirect/{provider}', 'FrontJobsController@redirect')->name('linkedinRedirect');
+
+        // VIEW JOBS
+        Route::get('/view-jobs', 'FrontJobsController@viewjobs')->name('view-jobs');
+        Route::post('/view-jobs', 'FrontJobsController@viewjobs')->name('view-jobs');
+        Route::post('/view-jobs/get_filter_list', 'FrontJobsController@get_filter_list')->name('get_filter_list');
+        Route::post('/view-jobs/filter_jobs', 'FrontJobsController@filter_jobs')->name('filter_jobs');
 
         Route::get('/employers', 'FrontJobsController@employers')->name('employers');
     }
