@@ -34,11 +34,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-12 col-lg-1 d-none d-lg-block">
                     &nbsp;
                 </div>
-                <div class="col-12 col-lg-11 pl-lg-5">
-                    <ul class="filter-list list-inline text-white fs-15 mb-0">
+                <div class="col-12 col-lg-11 px-0 pl-lg-5">
+                    <ul class="filter-list list-inline text-white fs-15 mb-0 px-3 px-lg-0">
                         {{-- Generated from JS. --}}
                     </ul>
                 </div>

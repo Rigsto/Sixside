@@ -143,8 +143,8 @@ input:focus, textarea:focus{
  }
 
 .filter-container.collapsed .filter-list{ 
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     opacity: 1;
     transition: opacity 1s;
 }
@@ -153,11 +153,11 @@ input:focus, textarea:focus{
     padding-bottom: 0px!important;
 }
 
-/* .filter-list.show{ */
-    /* height: 50px; */
-    /* overflow: hidden;
-    transition: height 5s ease-out;
-} */
+ul.filter-list{
+    width: 100%;
+    overflow:scroll;
+    white-space:nowrap
+}
 
 section.job-view .category-name{
     transition: 0.5s;
@@ -267,9 +267,17 @@ label {
     padding: 0;
 }
 
+
+
+
 @media only screen and (min-width: 1200px) {
     .py-lg-6{
         padding-top: 6rem!important;
         padding-bottom: 6rem!important;
+    }
+
+    ul.filter-list{
+        width: 100%;
+        overflow:none;
     }
 }

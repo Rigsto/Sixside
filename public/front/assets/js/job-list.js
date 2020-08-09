@@ -75,6 +75,11 @@ function pagination_action($url, $location_id, $category_id){
         success: function (response) {
             $('.pagination').first().html(response.pagination)
             $('.job-list').html(response.job_items)
+
+            $('html, body').animate({
+                scrollTop: $("body").offset().top
+            }, 0);
+
         }, error: function (xhr, desc, err) {
             alert(xhr.responseText);
         }
