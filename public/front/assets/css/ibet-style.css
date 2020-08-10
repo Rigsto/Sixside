@@ -1,3 +1,7 @@
+.fs-10{
+    font-size: 10px;
+}
+
 .fs-13 {
     font-size: 13px;
 }
@@ -10,8 +14,25 @@
     font-size: 15px;
 }
 
+a{
+    color: black;
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
 .btn {
     border-width: 0px;
+}
+
+.btn.btn-primary{
+    border-width: 1px;
+}
+
+.bg-primary-red{
+    background-color: #ED5D56;
 }
 
 input:focus, textarea:focus{
@@ -33,6 +54,14 @@ input:focus, textarea:focus{
     color: #585757!important;
     opacity: 0.5!important;
 }
+
+.truncate-text{
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+/* JOB DETAIL PAGE */
 
 .navigation {
     background-color: #ED5D56;
@@ -74,6 +103,107 @@ input:focus, textarea:focus{
     text-decoration: none;
 }
 
+/* END JOB DETAIL PAGE */
+
+/* JOB VIEW PAGE */
+.header{
+    position: relative;
+    background-image: url("../img/img_view_jobs_header.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header .header-container{
+    z-index: 1;
+    background-color: #BD4640;
+    mix-blend-mode: multiply;
+}
+
+.header .header-content{
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.filter-container{
+    height: 75px;
+    overflow: hidden;
+    transition: height 0.25s ease-out;
+}
+
+.filter-container.collapsed{
+    height: 100vh;
+    transition: height 0.25s ease-out;
+}
+
+.filter-container .filter-list{ 
+    opacity: 0;
+ }
+
+.filter-container.collapsed .filter-list{ 
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.filter-container.collapsed .row div{ 
+    padding-bottom: 0px!important;
+}
+
+ul.filter-list{
+    width: 100%;
+    overflow:scroll;
+    white-space:nowrap
+}
+
+section.job-view .category-name{
+    transition: 0.5s;
+}
+
+section.job-view .category-name:hover{
+    background-color: white;
+    color: #ED5D56!important;
+    border: 1px solid #ED5D56!important;
+}
+
+.job-card{
+    border: 1px solid #DBDBDB;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.job-card:hover{
+    background-color: #ED5D56;
+    border-color: #ED5D56;
+}
+
+.job-card:hover *{
+    color: white!important;
+}
+
+.job-view .footer{
+    position: relative;
+}
+
+.send-resume-button{
+    background-color: white;
+}
+
+.prev-button,.next-button{
+    width: 32px;
+    height: 32px;
+    border: 1px solid #DBDBDB;
+}
+
+.pagination li.active button{
+    color: #ED5D56 !important;
+}
+
+/* END JOB VIEW PAGE */
+
 /* JOB APPLY PAGE */
 .application-form {
     border: 1px solid #DBDBDB;
@@ -110,12 +240,12 @@ input[name="resume"] {
     color: #ED5D56 !important;
 }
 
-.text-secondary {
-    color: #989898;
+.text-secondary *{
+    color: #989898 !important;
 }
 
-.text-white {
-    color: white;
+.text-white * {
+    color: white!important;
 }
 
 /* END TEXT COLOR */
@@ -135,4 +265,19 @@ p {
 label {
     margin: 0;
     padding: 0;
+}
+
+
+
+
+@media only screen and (min-width: 1200px) {
+    .py-lg-6{
+        padding-top: 6rem!important;
+        padding-bottom: 6rem!important;
+    }
+
+    ul.filter-list{
+        width: 100%;
+        overflow:none;
+    }
 }

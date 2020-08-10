@@ -63,8 +63,33 @@ class FrontJobsController extends FrontBaseController
         return view('front.job-seeker', $this->data);
     }
 
-    public function viewJobs(){
-        return view('front.view-jobs');
+    public function viewJobs(Request $request){
+
+        $query = Job::where('status', 'active')
+        ->where('start_date', '<=', Carbon::now()->format('Y-m-d'))
+        ->where('end_date', '>=', Carbon::now()->format('Y-m-d'));
+    
+        if ($request->location_id){
+            $query->where('location_id', $request->location_id);
+        }
+
+        if ($request->category_id){
+            $query->where('category_id', $request->category_id);
+        }
+
+        $jobs = $query->paginate(6);
+
+        $this->job_items = view('templates.job-card')->with(compact('jobs'))->render();
+        $this->pagination = $jobs->links('templates.job-pagination')->render();
+
+        if ($request->ajax()) {
+            return $this->data;
+        }
+
+        $this->job_items = view('templates.job-card')->with(compact('jobs'))->render();
+        $this->pagination = $jobs->links('templates.job-pagination');
+
+        return view('front.job-view', $this->data);
     }
 
     public function uploadResume(){
@@ -333,5 +358,25 @@ class FrontJobsController extends FrontBaseController
         Notification::send($users, new HireWithUs($request->name, $request->company_name, $request->email, $request->phone, $request->notes));
 
         return Reply::dataOnly(['status' => 'success', 'msg' => "Your company application has been sent."]);
+	}
+	
+    public function get_filter_list(Request $request){
+        $this->filter_by = $request->filter_by;
+        if ($this->filter_by== 'location'){
+            $this->items = JobLocation::all();
+        }else{
+            $this->items = JobCategory::all();
+        }
+        $filter_items = view('templates.filter-card')->with($this->data)->render();
+        return $filter_items;
+    }
+
+    public function view_jobs_pagination(Request $request){
+        $this->jobs = Job::where('category_id', $request->category_id)
+            ->whereDate('start_date', '<=', Carbon::now())
+            ->whereDate('end_date', '>=', Carbon::now())
+            ->where('status', 'active')
+            ->paginate(6);
+        echo $this->jobs;
     }
 }
