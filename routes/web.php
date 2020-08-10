@@ -39,6 +39,9 @@ Route::group(
         Route::get('auth/redirect/{provider}', 'FrontJobsController@redirect')->name('linkedinRedirect');
 
         Route::get('/employers', 'FrontJobsController@employers')->name('employers');
+
+        Route::post('/send-resume', 'FrontJobsController@sendResume')->name('send-resume');
+        Route::post('/send-hire', 'FrontJobsController@sendHire')->name('send-hire');
     }
 );
 
