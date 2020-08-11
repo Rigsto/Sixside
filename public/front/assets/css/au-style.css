@@ -1,0 +1,10 @@
+.file-resume-box {
+    border: 2px dashed #ED5D56;
+    border-radius: 12px;
+}
+
+.file-resume-text {
+    font-family: Inter, sans-serif;
+    line-height: 14px;
+    color: #989898;
+}

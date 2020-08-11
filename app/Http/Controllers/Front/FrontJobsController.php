@@ -12,7 +12,9 @@ use App\JobApplication;
 use App\JobApplicationAnswer;
 use App\JobCategory;
 use App\JobLocation;
+use App\Notifications\HireWithUs;
 use App\Notifications\NewJobApplication;
+use App\Notifications\SendResume;
 use App\User;
 use Illuminate\Http\Request;
 use App\LinkedInSetting;
@@ -23,6 +25,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Str;
 
@@ -65,7 +68,7 @@ class FrontJobsController extends FrontBaseController
         $query = Job::where('status', 'active')
         ->where('start_date', '<=', Carbon::now()->format('Y-m-d'))
         ->where('end_date', '>=', Carbon::now()->format('Y-m-d'));
-    
+
         if ($request->location_id){
             $query->where('location_id', $request->location_id);
         }
@@ -88,6 +91,7 @@ class FrontJobsController extends FrontBaseController
 
         return view('front.job-view', $this->data);
     }
+
     public function uploadResume(){
         return view('front.upload-resume', $this->data);
     }
@@ -317,6 +321,44 @@ class FrontJobsController extends FrontBaseController
         });
         return current($result)['name'];
     }
+
+    public function sendResume(Request $request){
+        $validator = Validator::make($request->all(), [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'email|required',
+            'file' => 'required'
+        ]);
+
+        if ($validator->fails()){
+            return route('jobs.upload-resume')->with('Fail', $validator->errors());
+        }
+
+        $hashname = Files::upload($request->file, 'resumes', null, null, false);
+
+        $users = User::allAdmins();
+        Notification::send($users, new SendResume($request->first_name." ".$request->last_name, $request->email, $request->notes, $hashname));
+
+        return Reply::dataOnly(['status'=>'sucess', 'msg'=>'Your resume has been sent.']);
+    }
+
+    public function sendHire(Request $request){
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'company_name' => 'required',
+            'email' => 'email|required',
+            'phone_number' => 'required',
+        ]);
+
+        if ($validator->fails()){
+            return route('jobs.hire-with-us')->with('Fail', $validator->errors());
+        }
+
+        $users = User::allAdmins();
+        Notification::send($users, new HireWithUs($request->name, $request->company_name, $request->email, $request->phone, $request->notes));
+
+        return Reply::dataOnly(['status' => 'success', 'msg' => "Your company application has been sent."]);
+	}
 
     public function get_filter_list(Request $request){
         $this->filter_by = $request->filter_by;
