@@ -405,7 +405,9 @@ $gender = [
                     </div>
                     <div class="col-12 col-lg-7 mb-4">
                         <textarea class="form-control" id="cover_letter" form="createForm" rows="3"></textarea>
-                        <button class="submit-button btn bg-primary-red mt-4 py-2">Submit Application</button>
+                        <div class="g-recaptcha mt-4" data-sitekey="6Lffeb0ZAAAAAFTJiShpp6AShPpxv4aLcTky0cWk" data-callback="recaptcha_callback"></div>
+                        <p class="captcha-empty-state text-red d-none">Please Complete CAPTCHA.</p>
+                        <button class="submit-button btn bg-primary-red mt-2 py-2">Submit Application</button>
                     </div>
                 </div>
             </div>
@@ -415,8 +417,10 @@ $gender = [
 @endsection
 
 @push('footer-script')
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script>
     $url = "{{route('jobs.saveApplication')}}";
+    $view_jobs_url = "{{route('jobs.view-jobs')}}"
     $csrf_token = "{{ csrf_token() }}";
 </script>
 <script src="{{ asset('front/assets/js/job-apply.js') }}"></script>

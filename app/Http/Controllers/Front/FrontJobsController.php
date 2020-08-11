@@ -269,7 +269,7 @@ class FrontJobsController extends FrontBaseController
             $linkedin = true;
         }
 
-        // Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
+        Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
 
         return Reply::dataOnly(['status' => 'success', 'msg' => __('modules.front.applySuccessMsg')]);
     }

@@ -18,17 +18,17 @@
     <div class="filter-container bg-primary-red mb-5 text-white">
         <div class="container">
             <div class="row">
-                <div class="col-3 col-lg-1 pt-4 pb-4 pr-0">
+                <div class="d-none d-lg-block col-3 col-lg-1 pt-4 pb-4 pr-0">
                     <li class="list-inline-item">Filter By</li>
                 </div>
-                <div class="col-9 col-lg-11 pt-4 pb-4 pl-lg-5 text-right text-lg-left">
+                <div class="col-12 col-lg-11 pt-4 pb-4 pl-lg-5 text-left">
                     <ul class="list-inline fs-15 mb-0">
                         <li class="list-inline-item pr-4 font-weight-medium text-right">
-                            <button class="btn p-0" onclick="show_filter_list('location')">
+                            <button class="loc_toggler btn p-0" onclick="show_filter_list('location')">
                                 Location <i class="fas fa-caret-down"></i></li>
                         </button>
                         <li class="list-inline-item pr-4 font-weight-medium text-right">
-                            <button class="btn p-0" onclick="show_filter_list('job_function')">
+                            <button class="cat_toggler btn p-0" onclick="show_filter_list('job_function')">
                                 Job Function <i class="fas fa-caret-down"></i>
                             </button>
                         </li>
@@ -47,10 +47,22 @@
     </div>
 
     <div class="container mb-5">
+        <div class="shimmer-container row d-none">
+            <div class="col-12 col-lg-4 mb-4">
+                <div class="shimmer w-100" style="height:250px"></div>
+            </div>
+            
+            <div class="col-12 col-lg-4 mb-4">
+                <div class="shimmer w-100" style="height:250px"></div>
+            </div>
+            
+            <div class="col-12 col-lg-4 mb-4">
+                <div class="shimmer w-100" style="height:250px"></div>
+            </div>  
+        </div>
+
         <div class="job-list row">
             {!! $job_items !!}
-
-            
         </div>
         <div class="row">
             <div class="col-12 mt-5">
