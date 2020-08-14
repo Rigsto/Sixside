@@ -105,7 +105,7 @@
                         <p style="font-weight: 400;color: rgb(0,0,0);margin-top: 16px;font-family: Inter, sans-serif;letter-spacing: 1PX;font-size: 14PX;margin-bottom: 6px;">ABOUT SIX SIDE</p>
                         <h1 style="font-weight: bold;font-size: 48px;font-family: Inter, sans-serif;">Who are we?</h1>
                         <p style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;">Six Side Recruitment specializes in connecting businesses with permanent, contract, and temporary candidates to meet their business’ talent needs.</p>
-                    </div><a href="#" style="color: rgb(237,93,86);font-family: Inter, sans-serif;font-weight: 400;">Learn More</a></div>
+                    </div><a href="{{ route('jobs.about') }}" style="color: rgb(237,93,86);font-family: Inter, sans-serif;font-weight: 400;">Learn More</a></div>
             </div>
         </div>
     </section>

@@ -7,9 +7,10 @@
                     <div>
                         <h1 style="font-weight: bold;font-size: 48px;">Ready to find a new job? </h1>
                         <p class="text-md-center text-lg-left" style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;">We are your long term career consultants. We can provide you with accurate and timely market information to help you make the best decisions for your career.</p>
-                        <div class="text-md-center d-flex flex-column flex-shrink-0 align-items-stretch align-content-center flex-sm-row justify-content-sm-center flex-md-row justify-content-md-center flex-lg-row justify-content-lg-start flex-xl-row justify-content-xl-start"><button class="btn btn-primary border-white primaryBtnHovered" type="button" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">View Jobs</button>
-                            <p class="visible"
-                               style="margin-right: 20px;margin-left: 20px;max-height: 100%;min-height: 100%;margin-top: 16px;color: rgb(197,197,197);font-size: 12px;">OR</p><a href="{{ route('jobs.upload-resume') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">Send Us Your Resume</a></div>
+                        <div class="text-md-center d-flex flex-column flex-shrink-0 align-items-stretch align-content-center flex-sm-row justify-content-sm-center flex-md-row justify-content-md-center flex-lg-row justify-content-lg-start flex-xl-row justify-content-xl-start">
+                            <a href="{{ route('jobs.view-jobs') }}" class="btn btn-primary border-white primaryBtnHovered" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">View Jobs</a>
+                            <p class="visible" style="margin: 12px 20px 0 20px; max-height: 100%;min-height: 100%;color: rgb(197,197,197);font-size: 12px;">OR</p>
+                            <a href="{{ route('jobs.upload-resume') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255); color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">Send Us Your Resume</a></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-6 offset-xl-0 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center order-1 justify-content-sm-center order-sm-1 justify-content-md-center order-md-1 justify-content-lg-center order-lg-2 justify-content-xl-center order-xl-2"
