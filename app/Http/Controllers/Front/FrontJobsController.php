@@ -66,6 +66,8 @@ class FrontJobsController extends FrontBaseController
     public function viewJobs(Request $request){
 
         $query = Job::where('status', 'active')
+        ->join('job_locations', 'job_locations.id', '=', 'jobs.location_id')
+        ->join('countries', 'countries.id', '=', 'job_locations.country_id')
         ->where('start_date', '<=', Carbon::now()->format('Y-m-d'))
         ->where('end_date', '>=', Carbon::now()->format('Y-m-d'));
 
