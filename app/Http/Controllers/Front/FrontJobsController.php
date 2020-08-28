@@ -246,43 +246,43 @@ class FrontJobsController extends FrontBaseController
         }
         $jobApplication->save();
 
-        // if ($request->hasFile('resume')) {
-        //     $hashname = Files::upload($request->resume, 'documents/'.$jobApplication->id, null, null, false);
-        //     $jobApplication->documents()->create([
-        //         'name' => 'Resume',
-        //         'hashname' => $hashname
-        //     ]);
-        // }
+        if ($request->hasFile('resume')) {
+            $hashname = Files::upload($request->resume, 'documents/'.$jobApplication->id, null, null, false);
+            $jobApplication->documents()->create([
+                'name' => 'Resume',
+                'hashname' => $hashname
+            ]);
+        }
 
-        // $linkedin = false;
+        $linkedin = false;
 
-        // if($request->linkedinPhoto)
-        // {
-        //     $contents = file_get_contents($request->linkedinPhoto);
-        //     $getfilename =  str_replace(' ', '_', $request->full_name);
-        //     $filename = $jobApplication->id.$getfilename.'.png';
-        //     Storage::put('candidate-photos/'.$filename, $contents);
-        //     $jobApplication = JobApplication::find($jobApplication->id);
-        //     $jobApplication->photo = $filename;
-        //     $jobApplication->save();
-        // }
+        if($request->linkedinPhoto)
+        {
+            $contents = file_get_contents($request->linkedinPhoto);
+            $getfilename =  str_replace(' ', '_', $request->full_name);
+            $filename = $jobApplication->id.$getfilename.'.png';
+            Storage::put('candidate-photos/'.$filename, $contents);
+            $jobApplication = JobApplication::find($jobApplication->id);
+            $jobApplication->photo = $filename;
+            $jobApplication->save();
+        }
 
-        // $users = User::allAdmins();
-        // if (!empty($request->answer)) {
-        //     foreach ($request->answer as $key => $value) {
-        //         $answer = new JobApplicationAnswer();
-        //         $answer->job_application_id = $jobApplication->id;
-        //         $answer->job_id = $request->job_id;
-        //         $answer->question_id = $key;
-        //         $answer->answer = $value;
-        //         $answer->save();
-        //     }
-        // }
-        // if($request->has('apply_type')){
-        //     $linkedin = true;
-        // }
+        $users = User::allAdmins();
+        if (!empty($request->answer)) {
+            foreach ($request->answer as $key => $value) {
+                $answer = new JobApplicationAnswer();
+                $answer->job_application_id = $jobApplication->id;
+                $answer->job_id = $request->job_id;
+                $answer->question_id = $key;
+                $answer->answer = $value;
+                $answer->save();
+            }
+        }
+        if($request->has('apply_type')){
+            $linkedin = true;
+        }
 
-        // Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
+        Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
 
         return Reply::dataOnly(['status' => 'success', 'msg' => __('modules.front.applySuccessMsg')]);
     }
