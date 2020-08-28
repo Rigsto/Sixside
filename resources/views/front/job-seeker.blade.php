@@ -27,8 +27,9 @@
             <div style="margin-top: 20px;">
                 <div class="row areaBoxRow" style="margin-left: 0;margin-right: 0;margin-top: 0px;">
                     @for ($i = 0; $i < 3; $i++)
-                    <a href="{{ route('jobs.jobDetail',['slug' => $job_items[$i]->slug]) }}">
+                    
                         <div class="col-lg-4 col-xl-4" data-aos="fade-up" data-aos-delay="100" style="margin-top: 40px;margin-bottom: 40px;">
+                            <a href="{{ route('jobs.jobDetail',['slug' => $job_items[$i]->slug]) }}">
                             <div class="jobCard p-4" style="width: 100%;border-radius: 8px;text-align: center;font-size: 36px;border: 1px solid rgb(237,93,86)">
                                 <div>
                                     <h1 style="font-size: 15px;font-weight: 500;margin-top: 0px;font-family: Inter, sans-serif;text-align: left;">{{ $job_items[$i]['title'] }}</h1>
@@ -53,8 +54,8 @@
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </div>
-                    </a>
                     @endfor
 
                 </div>
