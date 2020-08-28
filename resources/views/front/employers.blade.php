@@ -8,12 +8,12 @@
                         <h1 class="text-center text-sm-center text-md-center text-lg-left text-xl-left" style="font-weight: bold;font-size: 48px;">Hire with the Power of Data and A.I.</h1>
                         <p class="text-md-center text-lg-left" style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;margin-bottom: 40px;">Using our large network and advanced A.I. algorithm we can recommend the right talent for your organization.</p>
                         <div class="text-md-center d-flex flex-column flex-shrink-0 align-items-stretch align-content-center flex-sm-row justify-content-sm-center align-items-sm-center flex-md-row justify-content-md-center align-items-md-center flex-lg-row justify-content-lg-start align-items-lg-center flex-xl-row justify-content-xl-start align-items-xl-center">
-                            <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary border-white primaryBtnHovered" type="button" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">Request Employees</a>
+                            <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary border-white primaryBtnHovered" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">Request Employees</a>
                             <p class="visible" style="margin: 12px 20px 0 20px; max-height: 100%;min-height: 100%;color: rgb(197,197,197);font-size: 12px;">OR</p>
-                            <a href="{{ route('jobs.view-jobs') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;">Looking for a job?</a></div>
+                            <a href="{{ route('jobs.view-jobs') }}" class="btn btn-primary" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;">Looking for a job?</a></div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 offset-xl-1 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center order-1 justify-content-sm-center order-sm-1 justify-content-md-center order-md-1 justify-content-lg-center order-lg-2 justify-content-xl-center order-xl-2"
+                <div class="col-lg-6 col-xl-6 text-center text-lg-left"
                      style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
             </div>
         </div>
@@ -49,7 +49,7 @@
         </div>
         <div class="container" style="margin-bottom: 60px;padding-bottom: 40px;">
             <div class="row d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style="padding-top: 100px;padding-bottom: 100px;">
-                <div class="col-lg-5 col-xl-6 d-flex d-sm-flex d-md-flex d-xl-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-xl-start" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
+                <div class="col-lg-5 col-xl-6 text-center text-lg-left" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
                 <div class="col-lg-6 col-xl-6 offset-xl-0 text-center text-sm-center text-md-center text-lg-left text-xl-left">
                     <div style="margin-bottom: 40px;">
                         <h1 class="text-sm-center text-md-center text-lg-left text-xl-left" style="font-weight: bold;font-size: 42px;font-family: Inter, sans-serif;">Our company delivers skilled and qualified people.</h1>
@@ -58,13 +58,13 @@
                 </div>
             </div>
             <div class="row d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style="padding-top: 100px;padding-bottom: 100px;">
-                <div class="col-lg-7 col-xl-6 offset-lg-0 offset-xl-0 text-center text-sm-center text-md-center text-lg-left text-xl-left order-2 order-sm-2 order-md-2 order-lg-1 order-xl-1">
+                <div class="col-lg-7 col-xl-6 text-center text-sm-center text-md-center text-lg-left text-xl-left order-2 order-sm-2 order-md-2 order-lg-0 order-xl-0">
                     <div style="margin-bottom: 40px;">
                         <h1 class="text-sm-center text-md-center text-lg-left" style="font-weight: bold;font-size: 42px;font-family: Inter, sans-serif;">We reduce hiring costs without compromising on the quality of the greatest asset, people.</h1>
                         <p class="text-sm-center text-md-center text-lg-left text-xl-left" style="font-weight: normal;color: rgb(137,137,137);margin-top: 20px;">As an experienced recruitment agency, building long-lasting relationships with a small number of clients has helped us to grow into the type of recruitment partner you can rely on. </p>
                     </div>
                 </div>
-                <div class="col-lg-5 col-xl-6 offset-lg-0 offset-xl-0 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center order-1 justify-content-sm-center order-sm-1 justify-content-md-center order-md-1 justify-content-lg-end order-lg-2 justify-content-xl-center order-xl-2"
+                <div class="col-lg-5 col-xl-6 text-center text-lg-right"
                      style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
             </div>
         </div>
@@ -76,7 +76,7 @@
                 <p style="font-weight: normal;color: rgba(255,255,255,0.83);text-align: center;">Copywriting here about finding the best candidate for employers</p>
             </div>
             <div class="d-flex flex-row justify-content-center justify-content-sm-center align-items-lg-center justify-content-xl-center align-items-xl-center">
-                <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</a></div>
+                <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</a></div>
         </div>
     </section>
 @endsection

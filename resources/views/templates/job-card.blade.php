@@ -8,7 +8,10 @@
             <p class="text-primary-red mb-3">{{ date_format(date_create($job->end_date),"d F Y") }}</p>
             <div class="row text-primary-red font-weight-medium">
                 <div class="col-12 col-lg-6">
-                    <p class="truncate-text"><i class="fas fa-map-marker-alt mr-1"></i>{{ $job->company->address }}</p>
+                    <p class="truncate-text">
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        {{ $job['location'] }},{{ $job['country_name'] }}
+                    </p>
                 </div>
                 <div class="col-12 col-lg-6">
                     <p class="text-lg-right truncate-text"><i class="fas fa-suitcase mr-1"></i>{{ $job->category->name }}</p>

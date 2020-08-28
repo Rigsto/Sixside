@@ -35,7 +35,7 @@ $(document).ready(function(){
             $form_data.append('resume', $resume)
             $cover_letter = $('textarea#cover_letter').val();
             $form_data.append('cover_letter', $cover_letter)
-    
+            
             $.ajax({
                 type: "POST",
                 container: '#createForm',
@@ -49,6 +49,7 @@ $(document).ready(function(){
                         window.location.href = $view_jobs_url
                     }
                 },error: function (xhr, desc, err) {
+                    alert("ABC")
                     console.log(xhr.responseText);
                 }
             });
@@ -56,21 +57,6 @@ $(document).ready(function(){
             $('.captcha-empty-state').removeClass('d-none');
         }
     });
-
-    // function validator(){
-    //     $first_name = $('input[name="first_name"]')
-    //     $last_name = $('input[name="last_name"]').val()
-    //     $email = $('input[name="email"]').val()
-    //     $phone = $('input[name="phone"]').val()
-    //     $photo = $('input[name="photo"]').prop('files')[0];
-    //     $resume = $('input[name="resume"]').prop('files')[0];
-
-    //         console.log()
-    //     if ($first_name.val() == ""){
-    //         $($first_name.siblings('.invalid-tooltip')[0]).css('display', 'block')
-    //         return false
-    //     }
-    // }
 });
 
 window.recaptcha_callback = recaptcha_callback

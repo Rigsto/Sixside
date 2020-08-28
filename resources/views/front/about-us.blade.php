@@ -39,7 +39,7 @@
                 <p style="font-weight: normal;color: rgba(255,255,255,0.83);text-align: center;font-family: Inter, sans-serif;">Copywriting here about finding the best candidate for employers</p>
             </div>
             <div class="d-flex flex-row justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center">
-                <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</a></div>
+                <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</a></div>
         </div>
     </section>
 @endsection

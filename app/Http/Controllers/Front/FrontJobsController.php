@@ -60,12 +60,24 @@ class FrontJobsController extends FrontBaseController
     }
 
     public function jobSeeker(){
+        $job_items = Job::where('status', 'active')
+        ->join('job_locations', 'job_locations.id', '=', 'jobs.location_id')
+        ->join('countries', 'countries.id', '=', 'job_locations.country_id')
+        ->where('start_date', '<=', Carbon::now()->format('Y-m-d'))
+        ->where('end_date', '>=', Carbon::now()->format('Y-m-d'))
+        ->orderBy('jobs.created_at', 'DESC')
+        ->get();
+
+        $this->job_items = $job_items;
+
         return view('front.job-seeker', $this->data);
     }
 
     public function viewJobs(Request $request){
 
         $query = Job::where('status', 'active')
+        ->join('job_locations', 'job_locations.id', '=', 'jobs.location_id')
+        ->join('countries', 'countries.id', '=', 'job_locations.country_id')
         ->where('start_date', '<=', Carbon::now()->format('Y-m-d'))
         ->where('end_date', '>=', Carbon::now()->format('Y-m-d'));
 
@@ -78,9 +90,6 @@ class FrontJobsController extends FrontBaseController
         }
 
         $jobs = $query->paginate(6);
-
-        $this->job_items = view('templates.job-card')->with(compact('jobs'))->render();
-        $this->pagination = $jobs->links('templates.job-pagination')->render();
 
         if ($request->ajax()) {
             return $this->data;
