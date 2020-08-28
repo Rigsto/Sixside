@@ -93,7 +93,7 @@
                             <div class="col-12 col-lg-9 d-flex flex-wrap">
                                 <p
                                     class="resume-name text-secondary fs-14 font-weight-light mt-2 my-lg-auto ml-lg-auto">
-                                    File_name.zip</p>
+                                    File_name.pdf</p>
                             </div>
                         </div>
                     </div>
