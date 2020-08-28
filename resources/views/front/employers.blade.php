@@ -13,7 +13,7 @@
                             <a href="{{ route('jobs.view-jobs') }}" class="btn btn-primary" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;">Looking for a job?</a></div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 offset-xl-1 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center order-1 justify-content-sm-center order-sm-1 justify-content-md-center order-md-1 justify-content-lg-center order-lg-2 justify-content-xl-center order-xl-2"
+                <div class="col-lg-6 col-xl-6 text-center text-lg-left"
                      style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
             </div>
         </div>
@@ -49,7 +49,7 @@
         </div>
         <div class="container" style="margin-bottom: 60px;padding-bottom: 40px;">
             <div class="row d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style="padding-top: 100px;padding-bottom: 100px;">
-                <div class="col-lg-5 col-xl-6 d-flex d-sm-flex d-md-flex d-xl-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-xl-start" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
+                <div class="col-lg-5 col-xl-6 text-center text-lg-left" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
                 <div class="col-lg-6 col-xl-6 offset-xl-0 text-center text-sm-center text-md-center text-lg-left text-xl-left">
                     <div style="margin-bottom: 40px;">
                         <h1 class="text-sm-center text-md-center text-lg-left text-xl-left" style="font-weight: bold;font-size: 42px;font-family: Inter, sans-serif;">Our company delivers skilled and qualified people.</h1>
@@ -64,7 +64,7 @@
                         <p class="text-sm-center text-md-center text-lg-left text-xl-left" style="font-weight: normal;color: rgb(137,137,137);margin-top: 20px;">As an experienced recruitment agency, building long-lasting relationships with a small number of clients has helped us to grow into the type of recruitment partner you can rely on. </p>
                     </div>
                 </div>
-                <div class="col-lg-5 col-xl-6 offset-lg-0 offset-xl-0 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center order-1 justify-content-sm-center order-sm-1 justify-content-md-center order-md-1 justify-content-lg-end order-lg-2 justify-content-xl-center order-xl-2"
+                <div class="col-lg-5 col-xl-6 text-center text-lg-left"
                      style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
             </div>
         </div>

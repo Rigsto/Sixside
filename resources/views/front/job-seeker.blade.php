@@ -13,7 +13,7 @@
                             <a href="{{ route('jobs.upload-resume') }}" class="btn btn-primary" style="background-color: rgb(255,255,255); color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">Send Us Your Resume</a></div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 offset-xl-0 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center order-1 justify-content-sm-center order-sm-1 justify-content-md-center order-md-1 justify-content-lg-center order-lg-2 justify-content-xl-center order-xl-2"
+                <div class="col-lg-6 col-xl-6 text-center text-lg-left"
                      style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
             </div>
         </div>

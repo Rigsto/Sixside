@@ -116,8 +116,8 @@
                 <p class="text-center" style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;">Brief Copywriting why six side is different </p>
             </div>
             <div class="row d-flex d-sm-flex d-lg-flex d-xl-flex justify-content-center justify-content-sm-center align-items-lg-center align-items-xl-center" style="padding-top: 60px;padding-bottom: 60px;">
-                <div class="col-lg-6 col-xl-6" style="margin-bottom: 40px;">
-                    <img src="{{ asset('front/assets/img/Group%207%20(2).png') }}" style="width: 100%;">
+                <div class="col-lg-6 col-xl-6 text-center text-lg-left" style="margin-bottom: 40px;">
+                    <img src="{{ asset('front/assets/img/Group%207%20(2).png') }}" style="width: 80%;">
                 </div>
                 <div class="col-sm-11 col-lg-6 col-xl-6 text-center text-sm-center text-md-center text-lg-left text-xl-left">
                     <div style="margin-bottom: 40px;">
@@ -142,7 +142,7 @@
                         <p style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;">We make sure our clients are satisfied with their new hire and candidates are satisfied with their new position. </p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 d-flex d-xl-flex justify-content-center order-1 order-sm-1 order-md-1 order-lg-2 justify-content-xl-end order-xl-2" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
+                <div class="col-lg-6 col-xl-6 text-center text-lg-left" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
             </div>
         </div>
     </section>
