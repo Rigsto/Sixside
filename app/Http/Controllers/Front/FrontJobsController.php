@@ -238,13 +238,13 @@ class FrontJobsController extends FrontBaseController
             $jobApplication->city = $request->city;
         }
 
-        // $jobApplication->cover_letter = $request->cover_letter;
-        // $jobApplication->column_priority = 0;
+        $jobApplication->cover_letter = $request->cover_letter;
+        $jobApplication->column_priority = 0;
 
-        // if ($request->hasFile('photo')) {
-        //     $jobApplication->photo = Files::upload($request->photo, 'candidate-photos');
-        // }
-        // $jobApplication->save();
+        if ($request->hasFile('photo')) {
+            $jobApplication->photo = Files::upload($request->photo, 'candidate-photos');
+        }
+        $jobApplication->save();
 
         // if ($request->hasFile('resume')) {
         //     $hashname = Files::upload($request->resume, 'documents/'.$jobApplication->id, null, null, false);
