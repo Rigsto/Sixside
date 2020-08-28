@@ -21,7 +21,6 @@
             </div>
         </div>
     </div>
-
     <div class="container mt-5">
         <div class="row">
             <div class="col-12 col-lg-9">
@@ -32,12 +31,15 @@
             <div class="col-12 col-lg-3 d-flex flex-wrap mt-3 mt-lg-0">
                 <ul class="list-inline ml-lg-auto my-auto">
                     <li class="list-inline-item">
-                        <a href="" class="social-media-item py-2 px-3">
+                        <a 
+                        href="{{'https://www.facebook.com/sharer/sharer.php?u=http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']}}" 
+                        class="social-media-item py-2 px-3">
                             <i class="fa fa-facebook-square text-secondary" aria-hidden="true"></i> Share
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="" class="social-media-item py-2 px-3">
+                        <a href="{{'https://twitter.com/intent/tweet?status=http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']}}" 
+                        class="social-media-item py-2 px-3">
                             <i class="fa fa-twitter text-secondary" aria-hidden="true"></i> Tweet
                         </a>
                     </li>

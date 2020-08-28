@@ -8,9 +8,9 @@
                         <h1 class="text-center text-sm-center text-md-center text-lg-left text-xl-left" style="font-weight: bold;font-size: 48px;">Hire with the Power of Data and A.I.</h1>
                         <p class="text-md-center text-lg-left" style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;margin-bottom: 40px;">Using our large network and advanced A.I. algorithm we can recommend the right talent for your organization.</p>
                         <div class="text-md-center d-flex flex-column flex-shrink-0 align-items-stretch align-content-center flex-sm-row justify-content-sm-center align-items-sm-center flex-md-row justify-content-md-center align-items-md-center flex-lg-row justify-content-lg-start align-items-lg-center flex-xl-row justify-content-xl-start align-items-xl-center">
-                            <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary border-white primaryBtnHovered" type="button" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">Request Employees</a>
+                            <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary border-white primaryBtnHovered" style="background-color: #ED5D56;font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;padding-bottom: 8px;">Request Employees</a>
                             <p class="visible" style="margin: 12px 20px 0 20px; max-height: 100%;min-height: 100%;color: rgb(197,197,197);font-size: 12px;">OR</p>
-                            <a href="{{ route('jobs.view-jobs') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;">Looking for a job?</a></div>
+                            <a href="{{ route('jobs.view-jobs') }}" class="btn btn-primary" style="background-color: rgb(255,255,255);color: rgb(0,0,0);font-family: Inter, sans-serif;font-weight: 500;padding-top: 8px;">Looking for a job?</a></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-6 offset-xl-1 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center order-1 justify-content-sm-center order-sm-1 justify-content-md-center order-md-1 justify-content-lg-center order-lg-2 justify-content-xl-center order-xl-2"
@@ -76,7 +76,7 @@
                 <p style="font-weight: normal;color: rgba(255,255,255,0.83);text-align: center;">Copywriting here about finding the best candidate for employers</p>
             </div>
             <div class="d-flex flex-row justify-content-center justify-content-sm-center align-items-lg-center justify-content-xl-center align-items-xl-center">
-                <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary" type="button" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</a></div>
+                <a href="{{ route('jobs.hire-with-us') }}" class="btn btn-primary" style="background-color: rgb(255,255,255);color: rgb(0,0,0);padding-top: 10px;padding-bottom: 10px;padding-right: 16px;padding-left: 16px;font-size: 18px;text-align: center;font-family: Inter, sans-serif;font-weight: 500;">Hire Now</a></div>
         </div>
     </section>
 @endsection
