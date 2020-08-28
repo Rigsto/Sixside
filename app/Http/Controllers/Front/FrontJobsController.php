@@ -212,7 +212,6 @@ class FrontJobsController extends FrontBaseController
 
     /**
      * @param FrontJobApplication $request
-     * @return mixed
      */
     public function saveApplication(FrontJobApplication $request)
     {
@@ -284,7 +283,7 @@ class FrontJobsController extends FrontBaseController
 
         // Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
 
-        return "SAVE APPLICATION";
+        echo "SAVE APPLICATION";
 
         // return Reply::dataOnly(['status' => 'success', 'msg' => __('modules.front.applySuccessMsg')]);
     }
