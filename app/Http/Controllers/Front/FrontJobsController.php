@@ -216,74 +216,75 @@ class FrontJobsController extends FrontBaseController
      */
     public function saveApplication(FrontJobApplication $request)
     {
-        return "SAVE APPLICATION";
-        // $jobApplication = new JobApplication();
-        // $jobApplication->full_name = $request->full_name;
-        // $jobApplication->job_id = $request->job_id;
-        // $jobApplication->status_id = 1; //applied status id
-        // $jobApplication->email = $request->email;
-        // $jobApplication->phone = $request->phone;
+        $jobApplication = new JobApplication();
+        $jobApplication->full_name = $request->full_name;
+        $jobApplication->job_id = $request->job_id;
+        $jobApplication->status_id = 1; //applied status id
+        $jobApplication->email = $request->email;
+        $jobApplication->phone = $request->phone;
 
-        // if ($request->has('gender')) {
-        //     $jobApplication->gender = $request->gender;
-        // }
-        // if ($request->has('dob')) {
-        //     $jobApplication->dob = $request->dob;
-        // }
-        // if ($request->has('country')) {
-        //     $countriesArray = json_decode(file_get_contents(public_path('country-state-city/countries.json')), true)['countries'];
-        //     $statesArray = json_decode(file_get_contents(public_path('country-state-city/states.json')), true)['states'];
+        if ($request->has('gender')) {
+            $jobApplication->gender = $request->gender;
+        }
+        if ($request->has('dob')) {
+            $jobApplication->dob = $request->dob;
+        }
+        if ($request->has('country')) {
+            $countriesArray = json_decode(file_get_contents(public_path('country-state-city/countries.json')), true)['countries'];
+            $statesArray = json_decode(file_get_contents(public_path('country-state-city/states.json')), true)['states'];
 
-        //     $jobApplication->country = $this->getName($countriesArray, $request->country);
-        //     $jobApplication->state = $this->getName($statesArray, $request->state);
-        //     $jobApplication->city = $request->city;
-        // }
+            $jobApplication->country = $this->getName($countriesArray, $request->country);
+            $jobApplication->state = $this->getName($statesArray, $request->state);
+            $jobApplication->city = $request->city;
+        }
 
-        // $jobApplication->cover_letter = $request->cover_letter;
-        // $jobApplication->column_priority = 0;
+        $jobApplication->cover_letter = $request->cover_letter;
+        $jobApplication->column_priority = 0;
 
-        // if ($request->hasFile('photo')) {
-        //     $jobApplication->photo = Files::upload($request->photo, 'candidate-photos');
-        // }
-        // $jobApplication->save();
+        if ($request->hasFile('photo')) {
+            $jobApplication->photo = Files::upload($request->photo, 'candidate-photos');
+        }
+        $jobApplication->save();
 
-        // if ($request->hasFile('resume')) {
-        //     $hashname = Files::upload($request->resume, 'documents/'.$jobApplication->id, null, null, false);
-        //     $jobApplication->documents()->create([
-        //         'name' => 'Resume',
-        //         'hashname' => $hashname
-        //     ]);
-        // }
+        if ($request->hasFile('resume')) {
+            $hashname = Files::upload($request->resume, 'documents/'.$jobApplication->id, null, null, false);
+            $jobApplication->documents()->create([
+                'name' => 'Resume',
+                'hashname' => $hashname
+            ]);
+        }
 
-        // $linkedin = false;
+        $linkedin = false;
 
-        // if($request->linkedinPhoto)
-        // {
-        //     $contents = file_get_contents($request->linkedinPhoto);
-        //     $getfilename =  str_replace(' ', '_', $request->full_name);
-        //     $filename = $jobApplication->id.$getfilename.'.png';
-        //     Storage::put('candidate-photos/'.$filename, $contents);
-        //     $jobApplication = JobApplication::find($jobApplication->id);
-        //     $jobApplication->photo = $filename;
-        //     $jobApplication->save();
-        // }
+        if($request->linkedinPhoto)
+        {
+            $contents = file_get_contents($request->linkedinPhoto);
+            $getfilename =  str_replace(' ', '_', $request->full_name);
+            $filename = $jobApplication->id.$getfilename.'.png';
+            Storage::put('candidate-photos/'.$filename, $contents);
+            $jobApplication = JobApplication::find($jobApplication->id);
+            $jobApplication->photo = $filename;
+            $jobApplication->save();
+        }
 
-        // $users = User::allAdmins();
-        // if (!empty($request->answer)) {
-        //     foreach ($request->answer as $key => $value) {
-        //         $answer = new JobApplicationAnswer();
-        //         $answer->job_application_id = $jobApplication->id;
-        //         $answer->job_id = $request->job_id;
-        //         $answer->question_id = $key;
-        //         $answer->answer = $value;
-        //         $answer->save();
-        //     }
-        // }
-        // if($request->has('apply_type')){
-        //     $linkedin = true;
-        // }
+        $users = User::allAdmins();
+        if (!empty($request->answer)) {
+            foreach ($request->answer as $key => $value) {
+                $answer = new JobApplicationAnswer();
+                $answer->job_application_id = $jobApplication->id;
+                $answer->job_id = $request->job_id;
+                $answer->question_id = $key;
+                $answer->answer = $value;
+                $answer->save();
+            }
+        }
+        if($request->has('apply_type')){
+            $linkedin = true;
+        }
 
         // Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
+
+        return "SAVE APPLICATION";
 
         // return Reply::dataOnly(['status' => 'success', 'msg' => __('modules.front.applySuccessMsg')]);
     }
