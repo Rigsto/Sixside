@@ -49,6 +49,7 @@ $(document).ready(function(){
                         window.location.href = $view_jobs_url
                     }
                 },error: function (xhr, desc, err) {
+                    alert("ABC")
                     console.log(xhr.responseText);
                 }
             });
