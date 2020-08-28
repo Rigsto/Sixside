@@ -155,8 +155,7 @@ class FrontJobsController extends FrontBaseController
         $this->metaImage = $this->job->company->logo_url;
         $this->pageUrl = request()->url();
 
-        return view('front.job-detail', $this->data)->header("Content-Security-Policy: default-src 'self'; script-src 'nonce-{NONCE}'; img-src www.gstatic.com; frame-src www.google.com; object-src 'none'; base-uri 'none';
-        ");
+        return view('front.job-detail', $this->data);
     }
 
     /**

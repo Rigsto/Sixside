@@ -35,7 +35,7 @@ $(document).ready(function(){
             $form_data.append('resume', $resume)
             $cover_letter = $('textarea#cover_letter').val();
             $form_data.append('cover_letter', $cover_letter)
-    
+            console.log($url)
             $.ajax({
                 type: "POST",
                 container: '#createForm',
