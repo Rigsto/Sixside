@@ -99,9 +99,9 @@
 <!-- Start: Footer Basic -->
 <div class="footer-basic">
     <footer>
-        <div class="d-flex flex-column justify-content-around align-items-center flex-sm-column align-items-sm-center flex-md-column align-items-md-center flex-lg-row flex-xl-row" style="padding-right: 0px;padding-left: 0px;">
+        <div class="d-flex flex-column justify-content-between align-items-center flex-sm-column align-items-sm-center flex-md-column align-items-md-center flex-lg-row flex-xl-row container"">
             <!-- Start: Social Icons -->
-            <div class="d-flex flex-column align-items-xl-start social" style="padding-bottom: 0px;"><img src="{{ asset('front/assets/img/sixSideLogo.svg') }}" style="width: 250px;margin-bottom: 10px;"></div>
+            <div class="d-flex flex-column align-items-xl-start social" style="padding-bottom: 0;"><img src="{{ asset('front/assets/img/sixSideLogo.svg') }}" style="width: 250px;margin-bottom: 10px;"></div>
             <!-- End: Social Icons -->
             <!-- Start: Links -->
             <ul class="list-inline d-flex d-sm-block d-md-block d-lg-block d-xl-block flex-column flex-sm-column" style="margin-top: 12px;margin-bottom: 20px;">
@@ -110,7 +110,7 @@
                 <li class="list-inline-item" style="margin-bottom: 10px;"><a href="{{route('jobs.job-seeker')}}" style="margin-bottom: 10px;">Job Seekers</a></li>
             </ul>
             <!-- End: Links -->
-            <p style="color: rgb(237,93,86);font-size: 18px;margin-top: 10px;margin-bottom: 26px;"><span style="text-decoration: underline;">hello@sixsiderecruitment.com</span></p>
+            <a href="mailto:hello@sixsiderecruitment.com" style="color: rgb(237,93,86);font-size: 18px;margin-top: 10px;margin-bottom: 26px;"><span style="text-decoration: underline;">hello@sixsiderecruitment.com</span></a>
         </div>
         <!-- Start: Copyright -->
         <p class="copyright" style="margin-top: 20px;">© 2020 Six Side Recruitment Inc. </p>

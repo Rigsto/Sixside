@@ -79,7 +79,7 @@
                     <h2 class="font-weight-bold text-white text-center text-lg-left">Improve your resume into a powerful result-oriented document before applying.</h2>
                 </div>
                 <div class="col-12 col-lg-5 d-flex flex-wrap">
-                    <a class="send-resume-button btn mx-auto mt-5 py-3 ml-lg-auto mr-lg-0 my-lg-auto font-weight-medium" href="">Send us your Resume</a>
+                    <a class="send-resume-button btn mx-auto mt-5 py-3 ml-lg-auto mr-lg-0 my-lg-auto font-weight-medium" href="{{ route('jobs.upload-resume') }}">Send us your Resume</a>
                     {{-- <h1>Improve your resume</h1> --}}
                 </div>
             </div>
