@@ -116,7 +116,9 @@
                 <p class="text-center" style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;">Brief Copywriting why six side is different </p>
             </div>
             <div class="row d-flex d-sm-flex d-lg-flex d-xl-flex justify-content-center justify-content-sm-center align-items-lg-center align-items-xl-center" style="padding-top: 60px;padding-bottom: 60px;">
-                <div class="col-lg-6 col-xl-6 d-flex d-sm-flex d-xl-flex justify-content-center justify-content-sm-center justify-content-xl-start" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Group%207%20(2).png') }}" style="width: 80%;"></div>
+                <div class="col-lg-6 col-xl-6" style="margin-bottom: 40px;">
+                    <img src="{{ asset('front/assets/img/Group%207%20(2).png') }}" style="width: 100%;">
+                </div>
                 <div class="col-sm-11 col-lg-6 col-xl-6 text-center text-sm-center text-md-center text-lg-left text-xl-left">
                     <div style="margin-bottom: 40px;">
                         <h1 style="font-weight: 500;font-size: 24px;font-family: Inter, sans-serif;">Our Approach</h1>
