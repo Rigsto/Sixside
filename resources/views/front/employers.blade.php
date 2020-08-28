@@ -58,13 +58,13 @@
                 </div>
             </div>
             <div class="row d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style="padding-top: 100px;padding-bottom: 100px;">
-                <div class="col-lg-7 col-xl-6 offset-lg-0 offset-xl-0 text-center text-sm-center text-md-center text-lg-left text-xl-left order-2 order-sm-2 order-md-2 order-lg-1 order-xl-1">
+                <div class="col-lg-7 col-xl-6 text-center text-sm-center text-md-center text-lg-left text-xl-left order-2 order-sm-2 order-md-2 order-lg-1 order-xl-0">
                     <div style="margin-bottom: 40px;">
                         <h1 class="text-sm-center text-md-center text-lg-left" style="font-weight: bold;font-size: 42px;font-family: Inter, sans-serif;">We reduce hiring costs without compromising on the quality of the greatest asset, people.</h1>
                         <p class="text-sm-center text-md-center text-lg-left text-xl-left" style="font-weight: normal;color: rgb(137,137,137);margin-top: 20px;">As an experienced recruitment agency, building long-lasting relationships with a small number of clients has helped us to grow into the type of recruitment partner you can rely on. </p>
                     </div>
                 </div>
-                <div class="col-lg-5 col-xl-6 text-center text-lg-left"
+                <div class="col-lg-5 col-xl-6 text-center text-lg-right"
                      style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
             </div>
         </div>
