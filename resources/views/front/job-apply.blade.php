@@ -117,7 +117,8 @@
 @push('footer-script')
 <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 <script>
-    $url = "{{route('jobs.saveApplication')}}";
+    $url = "{{ route('jobs.saveApplication') }}"
+    console.log($url)
     $view_jobs_url = "{{route('jobs.view-jobs')}}"
     $csrf_token = "{{ csrf_token() }}";
 </script>
