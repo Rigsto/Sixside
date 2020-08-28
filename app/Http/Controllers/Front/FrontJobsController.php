@@ -155,7 +155,8 @@ class FrontJobsController extends FrontBaseController
         $this->metaImage = $this->job->company->logo_url;
         $this->pageUrl = request()->url();
 
-        return view('front.job-detail', $this->data);
+        return view('front.job-detail', $this->data)->header("Content-Security-Policy: default-src 'self'; script-src 'nonce-{NONCE}'; img-src www.gstatic.com; frame-src www.google.com; object-src 'none'; base-uri 'none';
+        ");
     }
 
     /**
@@ -282,7 +283,7 @@ class FrontJobsController extends FrontBaseController
             $linkedin = true;
         }
 
-        Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
+        // Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
 
         return Reply::dataOnly(['status' => 'success', 'msg' => __('modules.front.applySuccessMsg')]);
     }

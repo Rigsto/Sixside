@@ -56,21 +56,6 @@ $(document).ready(function(){
             $('.captcha-empty-state').removeClass('d-none');
         }
     });
-
-    // function validator(){
-    //     $first_name = $('input[name="first_name"]')
-    //     $last_name = $('input[name="last_name"]').val()
-    //     $email = $('input[name="email"]').val()
-    //     $phone = $('input[name="phone"]').val()
-    //     $photo = $('input[name="photo"]').prop('files')[0];
-    //     $resume = $('input[name="resume"]').prop('files')[0];
-
-    //         console.log()
-    //     if ($first_name.val() == ""){
-    //         $($first_name.siblings('.invalid-tooltip')[0]).css('display', 'block')
-    //         return false
-    //     }
-    // }
 });
 
 window.recaptcha_callback = recaptcha_callback
