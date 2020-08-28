@@ -212,30 +212,31 @@ class FrontJobsController extends FrontBaseController
 
     /**
      * @param FrontJobApplication $request
+     * @return mixed
      */
     public function saveApplication(FrontJobApplication $request)
     {
-        // $jobApplication = new JobApplication();
-        // $jobApplication->full_name = $request->full_name;
-        // $jobApplication->job_id = $request->job_id;
-        // $jobApplication->status_id = 1; //applied status id
-        // $jobApplication->email = $request->email;
-        // $jobApplication->phone = $request->phone;
+        $jobApplication = new JobApplication();
+        $jobApplication->full_name = $request->full_name;
+        $jobApplication->job_id = $request->job_id;
+        $jobApplication->status_id = 1; //applied status id
+        $jobApplication->email = $request->email;
+        $jobApplication->phone = $request->phone;
 
-        // if ($request->has('gender')) {
-        //     $jobApplication->gender = $request->gender;
-        // }
-        // if ($request->has('dob')) {
-        //     $jobApplication->dob = $request->dob;
-        // }
-        // if ($request->has('country')) {
-        //     $countriesArray = json_decode(file_get_contents(public_path('country-state-city/countries.json')), true)['countries'];
-        //     $statesArray = json_decode(file_get_contents(public_path('country-state-city/states.json')), true)['states'];
+        if ($request->has('gender')) {
+            $jobApplication->gender = $request->gender;
+        }
+        if ($request->has('dob')) {
+            $jobApplication->dob = $request->dob;
+        }
+        if ($request->has('country')) {
+            $countriesArray = json_decode(file_get_contents(public_path('country-state-city/countries.json')), true)['countries'];
+            $statesArray = json_decode(file_get_contents(public_path('country-state-city/states.json')), true)['states'];
 
-        //     $jobApplication->country = $this->getName($countriesArray, $request->country);
-        //     $jobApplication->state = $this->getName($statesArray, $request->state);
-        //     $jobApplication->city = $request->city;
-        // }
+            $jobApplication->country = $this->getName($countriesArray, $request->country);
+            $jobApplication->state = $this->getName($statesArray, $request->state);
+            $jobApplication->city = $request->city;
+        }
 
         // $jobApplication->cover_letter = $request->cover_letter;
         // $jobApplication->column_priority = 0;
@@ -283,9 +284,7 @@ class FrontJobsController extends FrontBaseController
 
         // Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
 
-        echo "SAVE APPLICATION";
-
-        // return Reply::dataOnly(['status' => 'success', 'msg' => __('modules.front.applySuccessMsg')]);
+        return Reply::dataOnly(['status' => 'success', 'msg' => __('modules.front.applySuccessMsg')]);
     }
 
     public function fetchCountryState(Request $request)
