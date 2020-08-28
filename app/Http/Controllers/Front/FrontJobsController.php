@@ -216,7 +216,7 @@ class FrontJobsController extends FrontBaseController
      */
     public function saveApplication(FrontJobApplication $request)
     {
-        echo "SAVE APPLICATION";
+        return "SAVE APPLICATION";
         // $jobApplication = new JobApplication();
         // $jobApplication->full_name = $request->full_name;
         // $jobApplication->job_id = $request->job_id;
