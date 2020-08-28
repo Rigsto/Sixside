@@ -132,7 +132,7 @@
                 </div>
             </div>
             <div class="row d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style="padding-top: 60px;padding-bottom: 60px;">
-                <div class="col-lg-6 col-xl-6 text-center text-sm-center text-md-center text-lg-left text-xl-left order-2 order-sm-2 order-md-2 order-lg-1 order-xl-1">
+                <div class="col-lg-6 col-xl-6 text-center text-sm-center text-md-center text-lg-left text-xl-left order-2 order-sm-2 order-md-2 order-lg-0 order-xl-0">
                     <div style="margin-bottom: 40px;">
                         <h1 style="font-weight: 500px;font-size: 24px;font-family: Inter, sans-serif;">Local Network</h1>
                         <p style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;">We connect with the local workforce through social and digital channels to inform them on the best market practices in addition to growing our candidate pool. </p>
