@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-12 col-md-6 mb-4">
                         <label for="phone_number" class="text-secondary mb-2">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="e.g. 999-999-999" required>
+                        <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="e.g. 999-999-999" required maxlength="13">
                     </div>
                     <div class="col-12 col-md-12 mb-4">
                         <label for="additional_notes" class="text-secondary mb-2">Additional Notes</label>
@@ -66,8 +66,11 @@
 
 @push('footer-script')
     <script>
-        $url = "";
-        $csrf_token = "{{ csrf_token() }}";
+        $(document).ready(function () {
+            $('#phone_number').mask("###-###-#####", {
+                reverse: true
+            });
+        });
     </script>
-    <script src="{{ asset('front/assets/js/hire-with-us.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
 @endpush
