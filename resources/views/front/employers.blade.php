@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-6 text-center text-lg-left"
-                     style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
+                     style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/img_header_employers.png') }}" style="width: 80%;"></div>
             </div>
         </div>
     </section>
@@ -49,7 +49,7 @@
         </div>
         <div class="container" style="margin-bottom: 60px;padding-bottom: 40px;">
             <div class="row d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style="padding-top: 100px;padding-bottom: 100px;">
-                <div class="col-lg-5 col-xl-6 text-center text-lg-left" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
+                <div class="col-lg-5 col-xl-6 text-center text-lg-left" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/img_employers_form.png') }}" style="width: 80%;"></div>
                 <div class="col-lg-6 col-xl-6 offset-xl-0 text-center text-sm-center text-md-center text-lg-left text-xl-left">
                     <div style="margin-bottom: 40px;">
                         <h1 class="text-sm-center text-md-center text-lg-left text-xl-left" style="font-weight: bold;font-size: 42px;font-family: Inter, sans-serif;">Our company delivers skilled and qualified people.</h1>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-xl-6 text-center text-lg-right"
-                     style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
+                     style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/img_employers_work.png') }}" style="width: 80%;"></div>
             </div>
         </div>
     </section>

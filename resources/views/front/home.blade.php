@@ -142,7 +142,7 @@
                         <p style="font-weight: normal;color: rgb(137,137,137);margin-top: 16px;font-family: Inter, sans-serif;">We make sure our clients are satisfied with their new hire and candidates are satisfied with their new position. </p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 text-center text-lg-left" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/Image.png') }}" style="width: 80%;"></div>
+                <div class="col-lg-6 col-xl-6 text-center text-lg-left" style="margin-bottom: 40px;"><img src="{{ asset('front/assets/img/img_home_network.png') }}" style="width: 80%;"></div>
             </div>
         </div>
     </section>
